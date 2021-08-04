@@ -38,6 +38,12 @@ class Deck():
             for name, value in values.items():
                 self.deck.append(Card(suite, name, value))
 
+    def deal_one_card(self):
+        return self.deck.pop(0)
+
     def shuffle_deck(self):
         shuffle(self.deck)
+
+    def __len__(self):
+        return len(self.deck)
 
